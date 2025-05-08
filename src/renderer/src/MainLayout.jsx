@@ -1,11 +1,5 @@
 import { DraggableTopBar } from '@/components';
-import {
-  ScrollText,
-  UserRoundCog,
-  Users,
-  WalletCards,
-  Warehouse,
-} from 'lucide-react';
+import {  UserRoundCog, Warehouse } from 'lucide-react';
 import { useState, useEffect } from 'react';
 import { Outlet, useNavigate } from 'react-router-dom';
 import Header from './components/Common/Headers';
@@ -29,24 +23,7 @@ const navigation = [
     dropdown: [
       { name: 'Users', href: '/users', current: false },
       { name: 'Server Configuration', href: '#', current: false },
-      { name: 'Service Providers', href: '/providers', current: false },
     ],
-  },
-  {
-    name: 'Employees',
-    href: '#',
-    icon: Users,
-    current: false,
-    dropdown: [
-      { name: 'Employee', href: '/employees/employees', current: false },
-      { name: 'Staff', href: '/employees/staffs', current: false },
-    ],
-  },
-  {
-    name: 'Guests',
-    href: '/guests',
-    icon: ScrollText,
-    current: false,
   },
   {
     name: 'Rooms',
@@ -55,24 +32,15 @@ const navigation = [
     current: false,
     dropdown: [
       { name: 'Services', href: '/rooms/services', current: false },
-      { name: 'Amenities', href: '/rooms/amenities', current: false },
       { name: 'Room', href: '/rooms' },
     ],
-  },
-  {
-    name: 'Pos Machine',
-    href: '/pos-machine',
-    icon: WalletCards,
-    current: false,
   },
 ];
 
 export default function MainLayout() {
   const { authState } = useAuth();
   const navigate = useNavigate();
-
   const userNavigation = [{ name: 'Your profile', href: '#' }];
-
   const [isOpenUserMenu, setIsOpenUserMenu] = useState(false);
   const [isOpenSidebar, setIsOpenSidebar] = useState(false);
   const [isCollapse, setIsCollapse] = useState(false);

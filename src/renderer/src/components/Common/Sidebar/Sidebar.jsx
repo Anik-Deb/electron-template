@@ -1,13 +1,6 @@
+/* eslint-disable react/prop-types */
 import React from 'react';
-import {
-  ArrowLeftToLine,
-  ArrowRightToLine,
-  ChevronsLeft,
-  ChevronsRight,
-  PanelLeftClose,
-  PanelLeftOpen,
-  Settings,
-} from 'lucide-react';
+import { PanelLeftClose, PanelLeftOpen, Settings } from 'lucide-react';
 import { NavLink, useLocation } from 'react-router-dom';
 import MobileDropdown from './MobileDropdown';
 import Dropdown from './Dropdown';
@@ -25,14 +18,8 @@ export default function Sidebar({
   setIsCollapse,
   setIsCollapseClicked,
 }) {
-  // const handleClick = (item) => {
-  //   setIsCollapseClicked(false)
-  //   dispatch(setActiveItem(item))
-  // }
-
   const { pathname } = useLocation();
 
-  // console.log('user:', authState?.user);
   return (
     <>
       {/* /////////////// sidebar for mobile ////////////////// */}
@@ -40,7 +27,7 @@ export default function Sidebar({
         <div className="relative z-50 overflow-y-auto sm:hidden text-white-text">
           <div className="fixed inset-0 flex">
             {/* <div className="w-full max-w-[280px] "> */}
-            
+
             <div className="w-full flex flex-col bg-white">
               <div className="relative mr-16 flex grow w-full">
                 {/* Sidebar component */}
@@ -54,14 +41,6 @@ export default function Sidebar({
                       <div className="text-xl font-semibold text-center">
                         Logo
                       </div>
-                      {/* <span>
-                        <img
-                          className="w-[8rem] h-auto"
-                          src={logo}
-                          alt="main logo"
-                        />
-                      </span> */}
-
                       {/* collapsebar */}
                       <div
                         onClick={() => setIsOpenSidebar(!isOpenSidebar)}
@@ -82,9 +61,6 @@ export default function Sidebar({
                     >
                       <li>
                         <ul role="list" className="space-y-1 px-2">
-                          {/* {navigation.map((item) =>
-                            !item.accessibleRole ||
-                            item.accessibleRole === authState?.user?.role ? ( */}
                           {navigation.map((item) =>
                             !item.accessibleRole ||
                             item.accessibleRole === authState?.user?.role ? (

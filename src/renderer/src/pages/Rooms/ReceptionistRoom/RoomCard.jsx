@@ -8,11 +8,6 @@ import { addDays } from 'date-fns';
 import { PencilLine } from 'lucide-react';
 import React from 'react';
 import { Link } from 'react-router-dom';
-import Checkout from './Checkout/Checkout';
-import CheckedIn from './components/RoomStatusChanged/CheckedIn';
-import BookingCancel from './components/RoomStatusChanged/BookingCancel';
-import RoomMaintenance from './components/RoomStatusChanged/RoomMaintenance';
-import RoomAvailable from './components/RoomStatusChanged/RoomAvailable';
 
 const RoomCard = ({ room }) => {
   console.log('room:', room);
