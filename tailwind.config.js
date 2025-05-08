@@ -1,0 +1,153 @@
+/** @type {import('tailwindcss').Config} */
+module.exports = {
+  darkMode: ['class'],
+  content: [
+    './pages/**/*.{js,jsx}',
+    './components/**/*.{js,jsx}',
+    './app/**/*.{js,jsx}',
+    './src/**/*.{js,jsx}',
+  ],
+  prefix: '',
+  theme: {
+    extend: {
+      fontFamily: {
+        inter: ['var(--font-inter)'],
+      },
+      colors: {
+        'white': 'rgba(var(--white))',    
+        'black': 'rgba(var(--black))',
+        'background':'rgba(var(--background))',
+        'light-gray': 'rgba(var(--light-gray))',
+        'blue-green-light': 'rgba(var(--blue-green-light))',
+        'blue-light': 'rgba(var(--blue-light))',
+        'bright-blue': 'rgba(var(--bright-blue))',
+        'green': 'rgba(var(--green))',
+        'light-green': 'rgba(var(--light-green))',
+        'gray-green': 'rgba(var(--gray-green))',
+        'gray-purple': 'rgba(var(--gray-purple))',
+        'pink-light': 'rgba(var(--pink-light))',
+        'light-pink': 'rgba(var(--light-pink))',
+        'sweet': 'rgba(var(--sweet))',
+        'red': 'rgba(var(--red))',
+        'red-light': 'rgba(var(--red-light))',
+        'red-gray': 'rgba(var(--red-gray))',
+        'elm-brown-red': 'rgba(var(--elm-brown-red))',
+        'yellow': 'rgba(var(--yellow))',
+        'light-yellow': 'rgba(var( --light-yellow))',
+        'olive': 'rgba(var(--olive))',
+        'border': 'rgba(var(--border))',
+        'input': 'rgba(var(--input))',
+        'input-shadow': 'rgba(var(--input-shadow))',
+        'ring': 'rgba(var(--ring))',
+        'overlay': 'rgba(var(--bg-overlay))',
+        'destructive': 'hsl(var(--destructive))',
+        'destructive-foreground': 'hsl(var(--destructive-foreground))',
+        'primary': { 
+          DEFAULT: 'rgba(var(--primary-500))', // 500
+          foreground: 'rgba(var(--primary-foreground))',
+          // new colors
+          50: 'rgba(var(--primary-50))',
+          100: 'rgba(var(--primary-100))',
+          200: 'rgba(var(--primary-200))',
+          300: 'rgba(var(--primary-300))',
+          400: 'rgba(var(--primary-400))',
+          500: 'rgba(var(--primary-500))',
+          600: 'rgba(var(--primary-600))',
+          700: 'rgba(var(--primary-700))',
+          800: 'rgba(var(--primary-800))',
+          900: 'rgba(var(--primary-900))',
+          950: 'rgba(var(--primary-950))',
+        },
+        // new colors
+        'secondary': { 
+          DEFAULT: 'rgba(var(--secondary-500))', // 500
+          50: 'rgba(var(--secondary-50))',
+          100: 'rgba(var(--secondary-100))',
+          200: 'rgba(var(--secondary-200))',
+          300: 'rgba(var(--secondary-300))',
+          400: 'rgba(var(--secondary-400))',
+          500: 'rgba(var(--secondary-500))',
+          600: 'rgba(var(--secondary-600))',
+          700: 'rgba(var(--secondary-700))',
+          800: 'rgba(var(--secondary-800))',
+          900: 'rgba(var(--secondary-900))',
+          950: 'rgba(var(--secondary-950))',
+        },
+        // new colors
+        'gray': { 
+          50: 'rgba(var(--gray-50))',
+          100: 'rgba(var(--gray-100))',
+          200: 'rgba(var(--gray-200))',
+          300: 'rgba(var(--gray-300))',
+          400: 'rgba(var(--gray-400))',
+          500: 'rgba(var(--gray-500))',
+          600: 'rgba(var(--gray-600))',
+          700: 'rgba(var(--gray-700))',
+          800: 'rgba(var(--gray-800))',
+          900: 'rgba(var(--gray-900))',
+          950: 'rgba(var(--gray-950))',
+        },        
+        'colorVariant': {
+          DEFAULT: 'rgba(var(--text-paragraph))',
+          heading: 'rgba(var(--text-heading))',
+          subHeading: 'rgba(var(--text-subheading))',
+          paragraph: 'rgba(var(--text-paragraph)',
+          note: 'rgba(var(--text-note)',
+        },
+        'muted': {
+          foreground: 'rgba(var(--muted-foreground))',
+        },
+        'gradient': {
+          primary: {
+            start: 'rgba(var(--primary-gradient-start))',
+            end: 'rgba(var(--primary-gradient-end))',
+            hoverStart: 'rgba(var(--primary-gradient-hover-start))',
+            hoverEnd: 'rgba(var(--primary-gradient-hover-end))',
+          },
+          white: {
+            start: 'rgba(var(--white-gradient-start))',
+            end: 'rgba(var(--white-gradient-end))',
+            hoverStart: 'rgba(var(--white-gradient-hover-start))',
+            hoverEnd: 'rgba(var(--white-gradient-hover-end))',
+            active: 'rgba(var(--white-gradient-hover-start))',
+          },
+          progress: {
+            start: 'rgba(var(--primary))',
+            end: 'rgba(var(--primary-lightgradient-end))'
+          }
+        },
+        'status': {
+          'todo': 'rgba(var(--status-todo))', 
+          'todo-light': 'rgba(var(--status-todo-light))', 
+          'progress': 'rgba(var(--status-progress))', 
+          'progress-light': 'rgba(var(--status-progress-light))', 
+          'done': 'rgba(var(--status-done))', 
+          'done-light': 'rgba(var(--status-done-light))', 
+          'overdue': 'rgba(var(--status-overdue))', 
+          'overdue-light': 'rgba(var(--status-overdue-light))', 
+          'review': 'rgba(var(--status-review))',
+          'review-light': 'rgba(var(--status-review-light))', 
+          'hold': 'rgba(var(--status-hold))', 
+          'hold-light': 'rgba(var(--status-hold-light))', 
+          'waiting': 'rgba(var(--status-waiting))', 
+          'waiting-light': 'rgba(var(--status-waiting-light))', 
+          'cancelled': 'rgba(var(--status-cancelled))', 
+          'cancelled-light': 'rgba(var(--status-cancelled-light))', 
+          'deferred': 'rgba(var(--status-deferred))', 
+          'deferred-light': 'rgba(var(--status-deferred-light))', 
+        }, 
+      },
+      
+      boxShadow: {
+        DEFAULT: '0 8px 40px 0px rgba(var(--card-gray-dropshadow))', 
+        input: '0 3px 4px 0 rgba(var(--input-shadow))',
+      },
+      dropShadow: {
+        primary: '0 3px 5px 0px rgba(var(--btn-primary-dropshadow))',
+        white: '0 2px 3px 0px rgba(var(--btn-white-dropshadow))',
+        collapse: '0 4.69px 3.13px 0 (var(--input-shadow))',
+      }
+    },
+  },
+  plugins: [require('tailwindcss-animate')],
+};
